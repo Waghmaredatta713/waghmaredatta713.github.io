@@ -30,19 +30,23 @@ nav a {
 }
 
 nav a:hover {
-  color: #60a5fa;
-  text-decoration: underline;
+  color: #38bdf8;
 }
 
-/* HEADER */
+/* HERO */
 header {
   text-align: center;
-  padding: 55px 20px;
+  padding: 50px 20px;
   border-bottom: 1px solid #1e293b;
 }
 
-header p {
-  color: #94a3b8;
+.profile-pic {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #38bdf8;
+  margin-bottom: 15px;
 }
 
 /* SECTIONS */
@@ -58,13 +62,6 @@ h2 {
   padding-bottom: 6px;
 }
 
-/* LIST */
-section ul {
-  margin-left: 18px;
-  padding-left: 18px;
-  line-height: 1.8;
-}
-
 /* CARDS */
 .cards {
   display: grid;
@@ -77,6 +74,11 @@ section ul {
   border: 1px solid #1e293b;
   border-radius: 10px;
   padding: 20px;
+}
+
+/* LIST */
+ul {
+  line-height: 1.8;
 }
 
 /* BUTTON */
@@ -107,6 +109,5 @@ footer {
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
-    gap: 12px;
   }
 }
