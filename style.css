@@ -37,9 +37,8 @@ body.dark {
 .devops-bg {
   position: fixed;
   inset: 0;
-  background:
-    radial-gradient(circle at 20% 10%, rgba(56,189,248,0.08), transparent 40%),
-    radial-gradient(circle at 80% 30%, rgba(34,211,238,0.08), transparent 40%);
+  background: radial-gradient(circle at 20% 10%, rgba(56,189,248,0.08), transparent 40%),
+              radial-gradient(circle at 80% 30%, rgba(34,211,238,0.08), transparent 40%);
   pointer-events: none;
   z-index: -1;
 }
@@ -61,7 +60,6 @@ nav ul {
   gap: 24px;
   list-style: none;
   justify-content: center;
-  flex-wrap: wrap;
 }
 
 nav a {
@@ -93,35 +91,22 @@ nav a:hover {
   width: 100%;
 }
 
-/* 🔥 UPDATED PROFILE IMAGE */
 .profile-pic {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
+  width: 185px;
+  height: 185px;
+  border-radius: 60%;
   border: 5px solid #38bdf8;
   object-fit: cover;
-
-  box-shadow:
-    0 0 0 6px rgba(56,189,248,0.25),
-    0 0 35px rgba(56,189,248,0.55);
 }
 
-/* =====================
-   HERO TEXT
-===================== */
 .hero-text h1 {
   font-size: 2.8rem;
-  font-weight: 700;
 }
 
 .headline-highlight {
+  color: #38bdf8;
   margin: 12px 0;
-  font-weight: 700;
-  padding: 6px 12px;
-  display: inline-block;
-  background: #facc15;      /* yellow background */
-  color: #020617;
-  border-radius: 6px;
+  font-weight: 600;
 }
 
 /* =====================
@@ -145,9 +130,7 @@ nav a:hover {
 }
 
 @keyframes blink {
-  50% {
-    opacity: 0;
-  }
+  50% { opacity: 0; }
 }
 
 /* =====================
@@ -162,11 +145,6 @@ nav a:hover {
   border-radius: 25px;
   text-decoration: none;
   font-weight: 600;
-  transition: transform 0.2s ease;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
 }
 
 /* =====================
@@ -186,7 +164,7 @@ section h2 {
 }
 
 /* =====================
-   CARDS
+   CARDS (BASE)
 ===================== */
 .cards {
   display: grid;
@@ -212,14 +190,29 @@ section h2 {
   margin-bottom: 10px;
 }
 
+.card ul {
+  margin-top: 12px;
+  padding-left: 18px;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
 /* =====================
-   PROJECT / EXPERIENCE STACK
+   EXPERIENCE & PROJECTS
+   (VERTICAL STACK)
 ===================== */
-#projects .cards,
-#experience .cards {
+#experience .cards,
+#projects .cards {
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+
+#experience .card,
+#projects .card {
+  width: 100%;
 }
 
 /* =====================
@@ -246,7 +239,7 @@ footer {
 }
 
 /* =====================
-   MOBILE RESPONSIVE
+   RESPONSIVE
 ===================== */
 @media (max-width: 768px) {
   .hero-inner {
@@ -254,16 +247,7 @@ footer {
     text-align: center;
   }
 
-  .profile-pic {
-    width: 130px;
-    height: 130px;
-    border-width: 4px;
-    box-shadow:
-      0 0 0 4px rgba(56,189,248,0.2),
-      0 0 20px rgba(56,189,248,0.45);
+  nav ul {
+    flex-wrap: wrap;
   }
-
-  .hero-text h1 {
-    font-size: 2.2rem;
-  }
-}
+} 
