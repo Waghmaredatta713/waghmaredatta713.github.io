@@ -9,45 +9,34 @@
 
 <body class="dark">
 
-<!-- NAVBAR -->
-<nav>
-  <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#summary">Summary</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-
 <!-- HERO -->
-<header id="home" class="hero">
-  <img src="pro_Image.jpeg" class="profile-pic" alt="Dattatray Waghmare">
+<header class="hero">
+  <img src="pro_Image.jpeg" alt="Dattatray Waghmare" class="profile-pic">
 
   <h1>Dattatray Waghmare</h1>
 
+  <!-- 1) YELLOW BACKGROUND LINE -->
   <h3 class="headline-highlight">
     System Administrator | DevOps Engineer | CI/CD | AWS | Docker & Kubernetes | IaC
   </h3>
 
-  <a class="btn" href="#contact">Contact Me</a>
+  <!-- 2) SPACE REDUCED -->
+  <a href="#contact" class="btn contact-btn">Contact Me</a>
 </header>
 
-<!-- SUMMARY -->
-<section id="summary">
+<!-- PROFESSIONAL SUMMARY -->
+<section class="section-card popup">
   <h2>Professional Summary</h2>
   <p>
     DevOps Engineer with 6+ years of experience in system administration and IT infrastructure,
-    including 2+ years of hands-on DevOps and cloud automation. Strong expertise in AWS, CI/CD,
-    Docker, Kubernetes, Infrastructure as Code, monitoring, and production support.
+    including 2+ years of hands-on DevOps and cloud automation.
   </p>
 </section>
 
-<!-- SKILLS -->
-<section id="skills">
+<!-- CORE SKILLS -->
+<section class="section-card popup">
   <h2>Core Skills</h2>
-  <ul class="simple-list">
+  <ul>
     <li>AWS, Jenkins, Git, GitHub, Argo CD</li>
     <li>Docker & Kubernetes</li>
     <li>Terraform, Ansible</li>
@@ -57,65 +46,49 @@
 </section>
 
 <!-- EXPERIENCE -->
-<section id="experience">
+<section class="section-card popup">
   <h2>Experience</h2>
 
-  <div class="block">
-    <h3>Senior Executive – DevOps / System Administrator</h3>
-    <span>MDIndia Health Insurance TPA, Pune | May 2023 – Present</span>
-    <ul>
-      <li>Built GitOps pipelines using Argo CD on AWS EC2 with Kubernetes.</li>
-      <li>Maintained 99.9% uptime for production workloads.</li>
-      <li>Improved deployment reliability by 60%.</li>
-    </ul>
-  </div>
+  <h3>Senior Executive – DevOps / System Administrator</h3>
+  <p>MDIndia Health Insurance TPA, Pune | May 2023 – Present</p>
+  <ul>
+    <li>Built GitOps pipelines using Argo CD on AWS EC2 with Kubernetes.</li>
+    <li>Maintained 99.9% uptime for production workloads.</li>
+  </ul>
 
-  <div class="block">
-    <h3>System Administrator</h3>
-    <span>Siddhi Health Care, Pune | Jan 2019 – Apr 2023</span>
-    <ul>
-      <li>Automated system health checks using shell scripts.</li>
-      <li>Reduced security incidents by 40%.</li>
-    </ul>
-  </div>
+  <h3>System Administrator</h3>
+  <p>Siddhi Health Care, Pune | Jan 2019 – Apr 2023</p>
+  <ul>
+    <li>Automated system health checks using shell scripting.</li>
+    <li>Reduced security incidents by 40%.</li>
+  </ul>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects">
+<section class="section-card popup">
   <h2>Projects</h2>
 
-  <div class="block">
-    <h3>Automated Deployment using Kubernetes & Argo CD</h3>
-    <p>
-      Implemented GitOps-based deployment pipelines on AWS EC2 using Kubernetes
-      to ensure high availability and scalability.
-    </p>
-  </div>
+  <h3>Automated Deployment on AWS using Kubernetes & Argo CD</h3>
+  <p>Implemented GitOps-based CI/CD pipelines ensuring high availability.</p>
 
-  <div class="block">
-    <h3>Kubernetes Monitoring & Alerting Platform</h3>
-    <p>
-      Built monitoring dashboards and alerts using Prometheus and Grafana,
-      improving incident response time by 35%.
-    </p>
-  </div>
+  <h3>Kubernetes Monitoring & Alerting Platform</h3>
+  <p>Built Prometheus & Grafana dashboards improving response time by 35%.</p>
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
+<section id="contact" class="section-card popup">
   <h2>Contact</h2>
 
-  <div class="contact-box">
+  <!-- 4) SAME BACKGROUND AS CONTACT -->
+  <div class="contact-card">
     <p><strong>Open to DevOps / Cloud Engineer opportunities</strong></p>
     <p>📞 9527440597</p>
     <p>📧 dattawaghmare713@gmail.com</p>
     <p>🔗 LinkedIn</p>
     <p>💻 GitHub</p>
-
-    <a class="btn resume-btn" href="resume.pdf" target="_blank">
-      Download Resume
-    </a>
   </div>
+
+  <a class="btn resume-btn" href="resume.pdf" target="_blank">Download Resume</a>
 </section>
 
 <footer>
