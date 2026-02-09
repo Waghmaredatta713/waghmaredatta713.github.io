@@ -2,98 +2,204 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Dattatray Waghmare | DevOps Engineer</title>
+
+  <!-- SEO -->
+  <title>Dattatray Waghmare | DevOps Engineer | AWS | CI/CD</title>
+  <meta name="description" content="DevOps Engineer with 6+ years experience in AWS, CI/CD, Docker, Kubernetes, Terraform, Ansible and Linux.">
+  <meta name="keywords" content="DevOps Engineer, AWS, CI/CD, Docker, Kubernetes, Terraform, Linux">
+  <meta name="author" content="Dattatray Waghmare">
+  <meta name="robots" content="index, follow">
+
+  <!-- Mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- INLINE FIX (Experience + Projects vertical stack) -->
+  <style>
+    #experience .cards,
+    #projects .cards {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    #experience .card,
+    #projects .card {
+      width: 100%;
+    }
+  </style>
 </head>
 
 <body class="dark">
 
+<div id="scroll-progress"></div>
+<div class="devops-bg"></div>
+
+<!-- NAVBAR -->
+<nav>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
 <!-- HERO -->
-<header class="hero">
-  <img src="pro_Image.jpeg" alt="Dattatray Waghmare" class="profile-pic">
+<header id="home" class="hero reveal">
+  <div class="hero-inner">
+    <img src="pro_Image.jpeg" alt="Dattatray Waghmare" class="profile-pic">
 
-  <h1>Dattatray Waghmare</h1>
+    <div class="hero-text">
+      <h1>Dattatray Waghmare</h1>
+      <h3 class="headline-highlight">
+        System Administrator | DevOps Engineer | CI/CD | AWS | Docker & Kubernetes | IaC
+      </h3>
 
-  <!-- 1) YELLOW BACKGROUND LINE -->
-  <h3 class="headline-highlight">
-    System Administrator | DevOps Engineer | CI/CD | AWS | Docker & Kubernetes | IaC
-  </h3>
+      <div class="terminal">
+        <span class="prompt">$</span>
+        <span id="terminal-text"></span>
+        <span class="cursor">█</span>
+      </div>
 
-  <!-- 2) SPACE REDUCED -->
-  <a href="#contact" class="btn contact-btn">Contact Me</a>
+      <a class="btn" href="#contact">Contact Me</a>
+    </div>
+  </div>
 </header>
 
-<!-- PROFESSIONAL SUMMARY -->
-<section class="section-card popup">
+<!-- SUMMARY -->
+<section class="reveal">
   <h2>Professional Summary</h2>
   <p>
     DevOps Engineer with 6+ years of experience in system administration and IT infrastructure,
-    including 2+ years of hands-on DevOps and cloud automation.
+    including 2+ years of hands-on DevOps and cloud automation. Strong expertise in AWS,
+    CI/CD pipelines, Docker, Kubernetes, Infrastructure as Code, monitoring, and production support.
   </p>
 </section>
 
-<!-- CORE SKILLS -->
-<section class="section-card popup">
+<!-- SKILLS -->
+<section id="skills" class="reveal">
   <h2>Core Skills</h2>
-  <ul>
-    <li>AWS, Jenkins, Git, GitHub, Argo CD</li>
-    <li>Docker & Kubernetes</li>
-    <li>Terraform, Ansible</li>
-    <li>Linux, Shell Scripting</li>
-    <li>Prometheus, Grafana</li>
-  </ul>
+  <div class="cards">
+    <div class="card"><h3>☁️ Cloud & DevOps</h3><p>AWS, Jenkins, Git, GitHub, Argo CD, CI/CD</p></div>
+    <div class="card"><h3>🐳 Containers</h3><p>Docker, Kubernetes</p></div>
+    <div class="card"><h3>⚙️ Infrastructure as Code</h3><p>Terraform, Ansible</p></div>
+    <div class="card"><h3>🐧 Linux & Monitoring</h3><p>Linux, Shell, Prometheus, Grafana</p></div>
+  </div>
 </section>
 
 <!-- EXPERIENCE -->
-<section class="section-card popup">
+<section id="experience" class="reveal">
   <h2>Experience</h2>
+  <div class="cards">
 
-  <h3>Senior Executive – DevOps / System Administrator</h3>
-  <p>MDIndia Health Insurance TPA, Pune | May 2023 – Present</p>
-  <ul>
-    <li>Built GitOps pipelines using Argo CD on AWS EC2 with Kubernetes.</li>
-    <li>Maintained 99.9% uptime for production workloads.</li>
-  </ul>
+    <div class="card">
+      <h3>Senior Executive – DevOps / System Administrator</h3>
+      <p><b>MDIndia Health Insurance TPA, Pune</b> | May 2023 – Present</p>
+      <ul>
+        <li>Built automated GitOps pipelines using Argo CD to deploy containerized applications on AWS EC2 with Kubernetes, achieving 99.9% uptime.</li>
+        <li>Managed Kubernetes deployments and scaling using Kubernetes Dashboard.</li>
+        <li>Improved deployment speed and reliability by 60% through CI/CD automation.</li>
+      </ul>
+    </div>
 
-  <h3>System Administrator</h3>
-  <p>Siddhi Health Care, Pune | Jan 2019 – Apr 2023</p>
-  <ul>
-    <li>Automated system health checks using shell scripting.</li>
-    <li>Reduced security incidents by 40%.</li>
-  </ul>
+    <div class="card">
+      <h3>System Administrator</h3>
+      <p><b>Siddhi Health Care, Pune</b> | Jan 2019 – Apr 2023</p>
+      <ul>
+        <li>Automated system health checks using shell scripting and cron jobs.</li>
+        <li>Performed server hardening, patching, and access control, reducing security incidents by 40%.</li>
+        <li>Supported migration toward DevOps-ready automation workflows.</li>
+      </ul>
+    </div>
+
+  </div>
 </section>
 
 <!-- PROJECTS -->
-<section class="section-card popup">
+<section id="projects" class="reveal">
   <h2>Projects</h2>
+  <div class="cards">
 
-  <h3>Automated Deployment on AWS using Kubernetes & Argo CD</h3>
-  <p>Implemented GitOps-based CI/CD pipelines ensuring high availability.</p>
+    <div class="card">
+      <h3>Automated Deployment on AWS using Kubernetes & Argo CD</h3>
+      <p>
+        Built automated GitOps pipelines using Argo CD to deploy containerized applications on AWS EC2 with Kubernetes, enabling high availability, seamless scaling, and 99.9% production uptime.
+      </p>
+      <p><b>Impact:</b> 60% faster deployments</p>
+    </div>
 
-  <h3>Kubernetes Monitoring & Alerting Platform</h3>
-  <p>Built Prometheus & Grafana dashboards improving response time by 35%.</p>
+    <div class="card">
+      <h3>Kubernetes Monitoring & Alerting Platform</h3>
+      <p>
+        Implemented a Kubernetes monitoring and alerting platform using Prometheus and Grafana, creating dashboards and alerts that improved incident response time by 35%.
+      </p>
+    </div>
+
+  </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section-card popup">
+<section id="contact" class="reveal">
   <h2>Contact</h2>
-
-  <!-- 4) SAME BACKGROUND AS CONTACT -->
-  <div class="contact-card">
-    <p><strong>Open to DevOps / Cloud Engineer opportunities</strong></p>
-    <p>📞 9527440597</p>
-    <p>📧 dattawaghmare713@gmail.com</p>
-    <p>🔗 LinkedIn</p>
-    <p>💻 GitHub</p>
-  </div>
-
-  <a class="btn resume-btn" href="resume.pdf" target="_blank">Download Resume</a>
+  <p><b>Open to DevOps / Cloud Engineer opportunities</b></p>
+  <p>📞 9527440597</p>
+  <p>📧 dattawaghmare713@gmail.com</p>
+  <p>🔗 <a href="https://www.linkedin.com/in/dattatray-waghmare" target="_blank">LinkedIn</a></p>
+  <p>💻 <a href="https://github.com/Waghmaredatta713" target="_blank">GitHub</a></p>
+  <a class="btn" href="resume.pdf" target="_blank">📄 Download Resume</a>
 </section>
 
-<footer>
-  © 2026 Dattatray Waghmare
+<footer class="reveal">
+  <p>© 2026 Dattatray Waghmare | DevOps Engineer</p>
 </footer>
+
+<!-- TERMINAL SCRIPT -->
+<script>
+const commands=[
+"CI/CD Automation","AWS Cloud Infrastructure","Docker & Kubernetes",
+"Infrastructure as Code","Monitoring & Alerting","Git & GitHub",
+"Automation & Shell Scripting","Production Support"];
+let c=0,i=0,t=document.getElementById("terminal-text");
+function run(){
+  if(i<commands[c].length){
+    t.textContent+=commands[c][i++];
+    setTimeout(run,80);
+  }else{
+    setTimeout(()=>{
+      t.textContent="";
+      i=0;
+      c=(c+1)%commands.length;
+      run();
+    },1200);
+  }
+}
+run();
+</script>
+
+<!-- SCROLL PROGRESS -->
+<script>
+const bar=document.getElementById("scroll-progress");
+window.addEventListener("scroll",()=>{
+  const d=document.documentElement;
+  bar.style.width=(d.scrollTop/(d.scrollHeight-d.clientHeight))*100+"%";
+});
+</script>
+
+<!-- SCROLL REVEAL -->
+<script>
+const els=document.querySelectorAll(".reveal,.card");
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting) e.target.classList.add("active");
+  });
+},{threshold:0.15});
+els.forEach(el=>obs.observe(el));
+</script>
 
 </body>
 </html>
