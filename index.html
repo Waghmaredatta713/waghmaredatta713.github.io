@@ -10,7 +10,6 @@
   <meta name="author" content="Dattatray Waghmare">
   <meta name="robots" content="index, follow">
 
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -31,11 +30,11 @@
 <!-- HERO -->
 <header id="home" class="hero reveal">
   <div class="hero-inner">
-    <img src="./pro_Image.jpeg" alt="Dattatray Waghmare - DevOps Engineer" class="profile-pic">
+    <img src="profile.jpg" alt="Dattatray Waghmare" class="profile-pic">
 
     <div>
       <h1>Dattatray Waghmare</h1>
-      <h3>DevOps Engineer | System Administrator</h3>
+      <h3><span class="typewriter"></span></h3>
       <p>
         DevOps Engineer specializing in AWS, CI/CD automation,
         Kubernetes orchestration and Infrastructure as Code.
@@ -50,8 +49,9 @@
   <h2>Professional Summary</h2>
   <p>
     DevOps Engineer with 6+ years of experience in system administration and IT infrastructure,
-    including 2+ years of hands-on DevOps and cloud automation. Strong expertise in AWS,
-    CI/CD pipelines, Docker, Kubernetes, Infrastructure as Code, monitoring, and production support.
+    including 2+ years of hands-on DevOps and cloud automation.
+    Strong expertise in AWS, CI/CD pipelines, Docker, Kubernetes,
+    Infrastructure as Code, monitoring, and production support.
   </p>
 </section>
 
@@ -71,7 +71,7 @@
     </div>
 
     <div class="card">
-      <h3>⚙️ Infrastructure as Code & Configuration Management</h3>
+      <h3>⚙️ Infrastructure as Code</h3>
       <p>Terraform, Ansible</p>
     </div>
 
@@ -99,8 +99,8 @@
     <div class="card">
       <h3>Kubernetes Monitoring Platform</h3>
       <p>
-        Implemented Prometheus and Grafana dashboards to reduce incident
-        response time by 35%.
+        Implemented Prometheus and Grafana dashboards to reduce
+        incident response time by 35%.
       </p>
     </div>
   </div>
@@ -115,14 +115,52 @@
   <p>🔗 <a href="https://www.linkedin.com/in/dattatray-waghmare" target="_blank">LinkedIn</a></p>
   <p>💻 <a href="https://github.com/Waghmaredatta713" target="_blank">GitHub</a></p>
 
-  <a class="btn" href="./resume.pdf" target="_blank">📄 Download Resume</a>
+  <a class="btn" href="resume.pdf" target="_blank">📄 Download Resume</a>
 </section>
 
 <footer class="reveal">
-  <p>© 2026 Dattatray Waghmare | DevOps Engineer | System Administrator</p>
+  <p>© 2026 Dattatray Waghmare | DevOps Engineer</p>
 </footer>
 
-<!-- 🔥 SCROLL ANIMATION SCRIPT (VISIBLE ANIMATIONS) -->
+<!-- TYPEWRITER SCRIPT -->
+<script>
+  const roles = [
+    "DevOps Engineer",
+    "AWS Cloud Engineer",
+    "CI/CD Automation Specialist",
+    "Docker & Kubernetes Engineer",
+    "Linux System Administrator"
+  ];
+
+  let roleIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  const speed = 100;
+  const delayAfterType = 1200;
+
+  const typeTarget = document.querySelector(".typewriter");
+
+  function typeEffect() {
+    const current = roles[roleIndex];
+
+    if (!isDeleting) {
+      typeTarget.textContent = current.slice(0, charIndex++);
+      if (charIndex > current.length) {
+        setTimeout(() => isDeleting = true, delayAfterType);
+      }
+    } else {
+      typeTarget.textContent = current.slice(0, charIndex--);
+      if (charIndex === 0) {
+        isDeleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+      }
+    }
+    setTimeout(typeEffect, isDeleting ? speed / 2 : speed);
+  }
+  typeEffect();
+</script>
+
+<!-- SCROLL ANIMATION SCRIPT -->
 <script>
   const revealElements = document.querySelectorAll(".reveal, .card");
 
