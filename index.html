@@ -29,9 +29,9 @@
 </nav>
 
 <!-- HERO -->
-<header id="home" class="hero">
+<header id="home" class="hero reveal">
   <div class="hero-inner">
-    <img src="./profile.jpg" alt="Dattatray Waghmare - DevOps Engineer" class="profile-pic">
+    <img src="./pro_Image.jpeg" alt="Dattatray Waghmare - DevOps Engineer" class="profile-pic">
 
     <div>
       <h1>Dattatray Waghmare</h1>
@@ -46,7 +46,7 @@
 </header>
 
 <!-- SUMMARY -->
-<section>
+<section class="reveal">
   <h2>Professional Summary</h2>
   <p>
     DevOps Engineer with 6+ years of experience in system administration and IT infrastructure,
@@ -56,7 +56,7 @@
 </section>
 
 <!-- SKILLS -->
-<section id="skills">
+<section id="skills" class="reveal">
   <h2>Core Skills</h2>
 
   <div class="cards">
@@ -83,7 +83,7 @@
 </section>
 
 <!-- PROJECTS -->
-<section id="projects">
+<section id="projects" class="reveal">
   <h2>Projects</h2>
 
   <div class="cards">
@@ -107,7 +107,7 @@
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
+<section id="contact" class="reveal">
   <h2>Contact</h2>
   <p><b>Open to DevOps / Cloud Engineer opportunities</b></p>
   <p>📞 9527440597</p>
@@ -118,9 +118,27 @@
   <a class="btn" href="./resume.pdf" target="_blank">📄 Download Resume</a>
 </section>
 
-<footer>
+<footer class="reveal">
   <p>© 2026 Dattatray Waghmare | DevOps Engineer | System Administrator</p>
 </footer>
+
+<!-- 🔥 SCROLL ANIMATION SCRIPT (VISIBLE ANIMATIONS) -->
+<script>
+  const revealElements = document.querySelectorAll(".reveal, .card");
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+
+  revealElements.forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
