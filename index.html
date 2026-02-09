@@ -12,7 +12,6 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -25,6 +24,7 @@
 <nav>
   <ul>
     <li><a href="#home">Home</a></li>
+    <li><a href="#summary">Summary</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
@@ -41,6 +41,7 @@
     <div class="hero-text">
       <h1>Dattatray Waghmare</h1>
 
+      <!-- YELLOW BACKGROUND LINE -->
       <h3 class="headline-highlight">
         System Administrator | DevOps Engineer | CI/CD | AWS | Docker & Kubernetes | IaC
       </h3>
@@ -51,14 +52,15 @@
         <span class="cursor">█</span>
       </div>
 
+      <!-- SPACE FIXED -->
       <a class="btn" href="#contact">Contact Me</a>
     </div>
 
   </div>
 </header>
 
-<!-- SUMMARY -->
-<section class="reveal">
+<!-- PROFESSIONAL SUMMARY -->
+<section id="summary" class="reveal section-card">
   <h2>Professional Summary</h2>
   <p>
     DevOps Engineer with 6+ years of experience in system administration and IT infrastructure,
@@ -68,7 +70,7 @@
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="reveal">
+<section id="skills" class="reveal section-card">
   <h2>Core Skills</h2>
   <div class="cards">
     <div class="card"><h3>☁️ Cloud & DevOps</h3><p>AWS, Jenkins, Git, GitHub, Argo CD, CI/CD</p></div>
@@ -79,9 +81,9 @@
 </section>
 
 <!-- EXPERIENCE -->
-<section id="experience" class="reveal">
+<section id="experience" class="reveal section-card">
   <h2>Experience</h2>
-  <div class="cards">
+  <div class="cards vertical">
 
     <div class="card">
       <h3>Senior Executive – DevOps / System Administrator</h3>
@@ -89,7 +91,7 @@
       <ul>
         <li>Built automated GitOps pipelines using Argo CD on AWS EC2 with Kubernetes (99.9% uptime).</li>
         <li>Managed Kubernetes deployments and scaling.</li>
-        <li>Improved deployment reliability by 60% using CI/CD automation.</li>
+        <li>Improved deployment reliability by 60% through CI/CD automation.</li>
       </ul>
     </div>
 
@@ -106,33 +108,34 @@
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="reveal">
+<section id="projects" class="reveal section-card">
   <h2>Projects</h2>
-  <div class="cards">
+  <div class="cards vertical">
 
     <div class="card">
       <h3>Automated Deployment on AWS using Kubernetes & Argo CD</h3>
       <p>
-        Built automated GitOps pipelines using Argo CD to deploy containerized applications on AWS EC2 with Kubernetes, enabling high availability, seamless scaling, and 99.9% production uptime (AWS EC2, Kubernetes, Argo CD, Docker, Git, Linux). 
+        GitOps-based deployment pipelines using Argo CD for containerized applications on AWS EC2
+        with Kubernetes, ensuring high availability and seamless scaling.
       </p>
-      </p>Impact: 60% faster deployments</p>
     </div>
 
     <div class="card">
       <h3>Kubernetes Monitoring & Alerting Platform</h3>
       <p>
-        Built automated GitOps pipelines using Argo CD to deploy containerized applications on AWS EC2 with Kubernetes, enabling high availability, seamless scaling, and 99.9% production uptime (AWS EC2, Kubernetes, Argo CD, Docker, Git, Linux). 
+        Implemented Prometheus and Grafana dashboards and alerts,
+        improving incident response time by 35%.
       </p>
-      </p>Impact: Reduced incident response time by 35%</p>
     </div>
 
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="reveal">
+<section id="contact" class="reveal section-card">
   <h2>Contact</h2>
 
+  <!-- SAME BACKGROUND AS CONTACT -->
   <div class="contact-card">
     <p><b>Open to DevOps / Cloud Engineer opportunities</b></p>
     <p>📞 9527440597</p>
@@ -141,6 +144,7 @@
     <p>💻 <a href="https://github.com/Waghmaredatta713" target="_blank">GitHub</a></p>
   </div>
 
+  <a class="btn resume-btn" href="resume.pdf" target="_blank">📄 Download Resume</a>
 </section>
 
 <footer class="reveal">
@@ -185,10 +189,10 @@ window.addEventListener("scroll",()=>{
 
 <!-- SCROLL REVEAL -->
 <script>
-const els=document.querySelectorAll(".reveal,.card");
-const obs=new IntersectionObserver(e=>{
-  e.forEach(x=>{
-    if(x.isIntersecting) x.target.classList.add("active");
+const els=document.querySelectorAll(".reveal");
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting) e.target.classList.add("active");
   });
 },{threshold:0.15});
 els.forEach(el=>obs.observe(el));
