@@ -1,55 +1,40 @@
-/* =====================
-   GLOBAL RESET
-===================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body.dark {
   font-family: "Segoe UI", sans-serif;
   background: radial-gradient(circle at top, #0b1220, #020617);
   color: #e5e7eb;
-  line-height: 1.6;
 }
 
-/* =====================
-   SCROLL PROGRESS
-===================== */
+/* Scroll bar */
 #scroll-progress {
   position: fixed;
-  top: 0;
-  left: 0;
-  height: 4px;
-  width: 0;
-  background: linear-gradient(90deg, #38bdf8, #22d3ee);
+  top: 0; left: 0;
+  height: 4px; width: 0;
+  background: linear-gradient(90deg,#38bdf8,#22d3ee);
   z-index: 9999;
 }
 
-/* =====================
-   BACKGROUND
-===================== */
+/* Background */
 .devops-bg {
   position: fixed;
   inset: 0;
-  background: radial-gradient(circle at 20% 10%, rgba(56,189,248,0.08), transparent 40%),
-              radial-gradient(circle at 80% 30%, rgba(34,211,238,0.08), transparent 40%);
-  pointer-events: none;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(56,189,248,0.08), transparent 40%),
+    radial-gradient(circle at 80% 30%, rgba(34,211,238,0.08), transparent 40%);
   z-index: -1;
 }
 
-/* =====================
-   NAVBAR
-===================== */
+/* Navbar */
 nav {
   position: sticky;
   top: 0;
-  z-index: 100;
   background: rgba(2,6,23,0.85);
   backdrop-filter: blur(10px);
   padding: 14px 40px;
@@ -57,152 +42,103 @@ nav {
 
 nav ul {
   display: flex;
+  justify-content: center;
   gap: 24px;
   list-style: none;
-  justify-content: center;
 }
 
 nav a {
   color: #cbd5f5;
   text-decoration: none;
-  font-weight: 500;
 }
+nav a:hover { color:#38bdf8; }
 
-nav a:hover {
-  color: #38bdf8;
-}
-
-/* =====================
-   HERO
-===================== */
+/* Hero */
 .hero {
   min-height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 80px 20px;
+  align-items: center;
 }
 
 .hero-inner {
   display: flex;
   gap: 50px;
-  align-items: center;
   max-width: 1100px;
-  width: 100%;
 }
 
 .profile-pic {
-  width: 170px;
-  height: 170px;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
-  border: 3px solid #38bdf8;
+  border: 4px solid #38bdf8;
   object-fit: cover;
 }
 
-.hero-text h1 {
-  font-size: 2.8rem;
-}
-
 .headline-highlight {
-  color: #38bdf8;
-  margin: 12px 0;
-  font-weight: 600;
+  background: linear-gradient(90deg,#facc15,#fde047);
+  color: #020617;
+  padding: 10px 16px;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 14px 0;
+  font-weight: 700;
 }
 
-/* =====================
-   TERMINAL
-===================== */
+/* Terminal */
 .terminal {
-  background: #020617;
-  border: 1px solid #1e293b;
-  padding: 14px;
-  margin: 18px 0;
-  border-radius: 10px;
+  background:#020617;
+  border:1px solid #1e293b;
+  padding:14px;
+  margin:16px 0;
+  border-radius:10px;
   font-family: monospace;
 }
 
-.prompt {
-  color: #22d3ee;
-}
+.prompt { color:#22d3ee; }
+.cursor { animation: blink 1s infinite; }
+@keyframes blink { 50%{opacity:0;} }
 
-.cursor {
-  animation: blink 1s infinite;
-}
-
-@keyframes blink {
-  50% { opacity: 0; }
-}
-
-/* =====================
-   BUTTON
-===================== */
+/* Button */
 .btn {
-  display: inline-block;
-  margin-top: 15px;
+  margin-top: 6px;
   padding: 10px 22px;
-  background: linear-gradient(135deg, #38bdf8, #22d3ee);
-  color: #020617;
+  background: linear-gradient(135deg,#38bdf8,#22d3ee);
   border-radius: 25px;
-  text-decoration: none;
-  font-weight: 600;
+  color:#020617;
+  text-decoration:none;
+  font-weight:600;
 }
 
-/* =====================
-   SECTIONS
-===================== */
+/* Sections */
 section {
   padding: 80px 20px;
   max-width: 1100px;
-  margin: auto;
+  margin:auto;
 }
 
 section h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
+  background: rgba(15,23,42,0.85);
+  padding: 14px 18px;
   border-left: 4px solid #38bdf8;
-  padding-left: 14px;
+  border-radius: 14px;
+  margin-bottom: 30px;
 }
 
-/* =====================
-   CARDS (BASE)
-===================== */
+/* Cards */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
   gap: 25px;
 }
 
 .card {
   background: rgba(15,23,42,0.85);
-  border: 1px solid #1e293b;
-  padding: 25px;
-  border-radius: 16px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  border:1px solid #1e293b;
+  padding:25px;
+  border-radius:18px;
 }
 
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 15px 30px rgba(56,189,248,0.15);
-}
-
-.card h3 {
-  color: #38bdf8;
-  margin-bottom: 10px;
-}
-
-.card ul {
-  margin-top: 12px;
-  padding-left: 18px;
-}
-
-.card li {
-  margin-bottom: 8px;
-}
-
-/* =====================
-   EXPERIENCE & PROJECTS
-   (VERTICAL STACK)
-===================== */
 #experience .cards,
 #projects .cards {
   display: flex;
@@ -210,44 +146,34 @@ section h2 {
   gap: 30px;
 }
 
-#experience .card,
-#projects .card {
-  width: 100%;
+/* Contact */
+.contact-card {
+  background: rgba(15,23,42,0.85);
+  padding: 28px;
+  border-radius: 18px;
+  max-width: 520px;
 }
 
-/* =====================
-   FOOTER
-===================== */
+/* Footer */
 footer {
-  text-align: center;
-  padding: 40px 20px;
-  color: #94a3b8;
+  text-align:center;
+  padding:40px;
+  color:#94a3b8;
 }
 
-/* =====================
-   REVEAL ANIMATION
-===================== */
+/* Reveal */
 .reveal {
-  opacity: 0;
+  opacity:0;
   transform: translateY(30px);
-  transition: all 0.7s ease;
+  transition: 0.7s;
 }
-
 .reveal.active {
-  opacity: 1;
+  opacity:1;
   transform: translateY(0);
 }
 
-/* =====================
-   RESPONSIVE
-===================== */
-@media (max-width: 768px) {
-  .hero-inner {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  nav ul {
-    flex-wrap: wrap;
-  }
+/* Mobile */
+@media(max-width:768px){
+  .hero-inner { flex-direction:column; text-align:center; }
+  .profile-pic { width:180px; height:180px; }
 }
