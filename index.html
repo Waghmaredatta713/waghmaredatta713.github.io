@@ -4,21 +4,25 @@
   <meta charset="UTF-8">
 
   <!-- SEO -->
-  <title>Dattatray Waghmare | DevOps Engineer</title>
+  <title>Dattatray Waghmare | DevOps Engineer | AWS | CI/CD</title>
+  <meta name="description" content="DevOps Engineer with 6+ years experience in AWS, CI/CD, Docker, Kubernetes, Terraform, Ansible and Linux.">
+  <meta name="keywords" content="DevOps Engineer, AWS, CI/CD, Docker, Kubernetes, Terraform, Linux">
+  <meta name="author" content="Dattatray Waghmare">
+  <meta name="robots" content="index, follow">
+
+  <!-- Mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="dark">
 
-<!-- SCROLL PROGRESS -->
+<!-- SCROLL PROGRESS BAR -->
 <div id="scroll-progress"></div>
 
-<!-- THEME TOGGLE -->
-<button id="theme-toggle">🌗</button>
-
-<!-- BACKGROUND DEVOPS PATTERN -->
+<!-- FAINT DEVOPS BACKGROUND -->
 <div class="devops-bg"></div>
 
 <!-- NAVBAR -->
@@ -27,6 +31,7 @@
     <li><a href="#home">Home</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="blog.html">Blog</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -35,14 +40,20 @@
 <header id="home" class="hero reveal">
   <div class="hero-inner">
 
-    <img src="pro_Image.jpeg" class="profile-pic" alt="Dattatray Waghmare">
+    <img src="pro_Image.jpeg" alt="Dattatray Waghmare" class="profile-pic">
 
-    <div>
+    <div class="hero-text">
       <h1>Dattatray Waghmare</h1>
 
+      <!-- YELLOW HIGHLIGHT HEADLINE -->
       <h3 class="headline-highlight">
         DevOps Engineer | AWS | CI/CD | Kubernetes
       </h3>
+
+      <p>
+        DevOps Engineer specializing in AWS, CI/CD automation,
+        Kubernetes orchestration and Infrastructure as Code.
+      </p>
 
       <!-- TERMINAL ANIMATION -->
       <div class="terminal">
@@ -51,60 +62,138 @@
         <span class="cursor">█</span>
       </div>
 
-      <a href="#contact" class="btn">Contact Me</a>
+      <a class="btn" href="#contact">Contact Me</a>
     </div>
 
   </div>
 </header>
 
+<!-- SUMMARY -->
+<section class="reveal">
+  <h2>Professional Summary</h2>
+  <p>
+    DevOps Engineer with 6+ years of experience in system administration and IT infrastructure,
+    including 2+ years of hands-on DevOps and cloud automation. Strong expertise in AWS,
+    CI/CD pipelines, Docker, Kubernetes, Infrastructure as Code, monitoring, and production support.
+  </p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="reveal">
+  <h2>Core Skills</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>☁️ Cloud & DevOps</h3>
+      <p>AWS, Jenkins, Git, GitHub, Argo CD, CI/CD Automation</p>
+    </div>
+
+    <div class="card">
+      <h3>🐳 Containers & Orchestration</h3>
+      <p>Docker, Kubernetes</p>
+    </div>
+
+    <div class="card">
+      <h3>⚙️ Infrastructure as Code</h3>
+      <p>Terraform, Ansible</p>
+    </div>
+
+    <div class="card">
+      <h3>🐧 Linux & Monitoring</h3>
+      <p>Linux, Shell Scripting, Prometheus, Grafana</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="reveal">
+  <h2>Projects</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>AWS Kubernetes Deployment with Argo CD</h3>
+      <p>
+        Kubernetes-based deployments on AWS using GitOps pipelines.
+      </p>
+      <p><b>Impact:</b> 60% faster deployments, 99.9% uptime</p>
+    </div>
+
+    <div class="card">
+      <h3>Kubernetes Monitoring Platform</h3>
+      <p>
+        Implemented Prometheus & Grafana dashboards.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="reveal">
+  <h2>Contact</h2>
+  <p><b>Open to DevOps / Cloud Engineer opportunities</b></p>
+  <p>📞 9527440597</p>
+  <p>📧 dattawaghmare713@gmail.com</p>
+  <p>🔗 <a href="https://www.linkedin.com/in/dattatray-waghmare" target="_blank">LinkedIn</a></p>
+  <p>💻 <a href="https://github.com/Waghmaredatta713" target="_blank">GitHub</a></p>
+
+  <a class="btn" href="resume.pdf" target="_blank">📄 Download Resume</a>
+</section>
+
 <footer class="reveal">
-  © 2026 Dattatray Waghmare | DevOps Engineer
+  <p>© 2026 Dattatray Waghmare | DevOps Engineer</p>
 </footer>
 
-<!-- TERMINAL SCRIPT -->
+<!-- TERMINAL ANIMATION SCRIPT -->
 <script>
-const commands = [
-  "kubectl get pods",
-  "terraform apply",
-  "docker build -t app .",
-  "jenkins pipeline running...",
-  "deployment successful ✅"
-];
+  const commands = [
+    "kubectl get pods",
+    "terraform apply",
+    "docker build -t app .",
+    "jenkins pipeline running...",
+    "deployment successful ✅"
+  ];
 
-let i = 0, j = 0;
-const terminal = document.getElementById("terminal-text");
+  let cmd = 0, char = 0;
+  const terminal = document.getElementById("terminal-text");
 
-function typeTerminal() {
-  if (j < commands[i].length) {
-    terminal.textContent += commands[i][j++];
-    setTimeout(typeTerminal, 80);
-  } else {
-    setTimeout(() => {
-      terminal.textContent = "";
-      j = 0;
-      i = (i + 1) % commands.length;
-      typeTerminal();
-    }, 1200);
+  function runTerminal() {
+    if (char < commands[cmd].length) {
+      terminal.textContent += commands[cmd][char++];
+      setTimeout(runTerminal, 80);
+    } else {
+      setTimeout(() => {
+        terminal.textContent = "";
+        char = 0;
+        cmd = (cmd + 1) % commands.length;
+        runTerminal();
+      }, 1200);
+    }
   }
-}
-typeTerminal();
+  runTerminal();
 </script>
 
-<!-- THEME TOGGLE SCRIPT -->
+<!-- SCROLL PROGRESS SCRIPT -->
 <script>
-const toggle = document.getElementById("theme-toggle");
-toggle.onclick = () => {
-  document.body.classList.toggle("light");
-};
+  const progressBar = document.getElementById("scroll-progress");
+  window.addEventListener("scroll", () => {
+    const d = document.documentElement;
+    progressBar.style.width =
+      (d.scrollTop / (d.scrollHeight - d.clientHeight)) * 100 + "%";
+  });
 </script>
 
-<!-- SCROLL BAR -->
+<!-- SCROLL REVEAL SCRIPT -->
 <script>
-const bar = document.getElementById("scroll-progress");
-window.addEventListener("scroll", () => {
-  const h = document.documentElement;
-  bar.style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100 + "%";
-});
+  const revealElements = document.querySelectorAll(".reveal, .card");
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("active");
+      });
+    },
+    { threshold: 0.15 }
+  );
+  revealElements.forEach(el => observer.observe(el));
 </script>
 
 </body>
