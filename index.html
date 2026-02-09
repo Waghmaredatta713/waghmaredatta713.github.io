@@ -10,26 +10,10 @@
   <meta name="author" content="Dattatray Waghmare">
   <meta name="robots" content="index, follow">
 
-  <!-- Mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
-
-  <!-- INLINE FIX (Experience + Projects vertical stack) -->
-  <style>
-    #experience .cards,
-    #projects .cards {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-    }
-
-    #experience .card,
-    #projects .card {
-      width: 100%;
-    }
-  </style>
 </head>
 
 <body class="dark">
@@ -44,7 +28,6 @@
     <li><a href="#skills">Skills</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
-    <li><a href="blog.html">Blog</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -52,10 +35,12 @@
 <!-- HERO -->
 <header id="home" class="hero reveal">
   <div class="hero-inner">
+
     <img src="pro_Image.jpeg" alt="Dattatray Waghmare" class="profile-pic">
 
     <div class="hero-text">
       <h1>Dattatray Waghmare</h1>
+
       <h3 class="headline-highlight">
         System Administrator | DevOps Engineer | CI/CD | AWS | Docker & Kubernetes | IaC
       </h3>
@@ -68,6 +53,7 @@
 
       <a class="btn" href="#contact">Contact Me</a>
     </div>
+
   </div>
 </header>
 
@@ -101,9 +87,9 @@
       <h3>Senior Executive – DevOps / System Administrator</h3>
       <p><b>MDIndia Health Insurance TPA, Pune</b> | May 2023 – Present</p>
       <ul>
-        <li>Built automated GitOps pipelines using Argo CD to deploy containerized applications on AWS EC2 with Kubernetes, achieving 99.9% uptime.</li>
-        <li>Managed Kubernetes deployments and scaling using Kubernetes Dashboard.</li>
-        <li>Improved deployment speed and reliability by 60% through CI/CD automation.</li>
+        <li>Built automated GitOps pipelines using Argo CD on AWS EC2 with Kubernetes (99.9% uptime).</li>
+        <li>Managed Kubernetes deployments and scaling.</li>
+        <li>Improved deployment reliability by 60% using CI/CD automation.</li>
       </ul>
     </div>
 
@@ -111,9 +97,8 @@
       <h3>System Administrator</h3>
       <p><b>Siddhi Health Care, Pune</b> | Jan 2019 – Apr 2023</p>
       <ul>
-        <li>Automated system health checks using shell scripting and cron jobs.</li>
-        <li>Performed server hardening, patching, and access control, reducing security incidents by 40%.</li>
-        <li>Supported migration toward DevOps-ready automation workflows.</li>
+        <li>Automated system health checks using shell scripts and cron jobs.</li>
+        <li>Performed server hardening and patching, reducing security incidents by 40%.</li>
       </ul>
     </div>
 
@@ -130,15 +115,15 @@
       <p>
         Built automated GitOps pipelines using Argo CD to deploy containerized applications on AWS EC2 with Kubernetes, enabling high availability, seamless scaling, and 99.9% production uptime (AWS EC2, Kubernetes, Argo CD, Docker, Git, Linux). 
       </p>
-      <p><b>Impact:</b> 60% faster deployments</p>
+      </p>Impact: 60% faster deployments</p>
     </div>
 
     <div class="card">
       <h3>Kubernetes Monitoring & Alerting Platform</h3>
       <p>
-        Implemented a Kubernetes monitoring and alerting platform using Prometheus and Grafana, creating application-level dashboards and alerts that improved incident response time by 35% (Kubernetes, Prometheus, Grafana, Docker). 
+        Built automated GitOps pipelines using Argo CD to deploy containerized applications on AWS EC2 with Kubernetes, enabling high availability, seamless scaling, and 99.9% production uptime (AWS EC2, Kubernetes, Argo CD, Docker, Git, Linux). 
       </p>
-      <p><b>Impact:</b> Reduced incident response time by 35%</p>
+      </p>Impact: Reduced incident response time by 35%</p>
     </div>
 
   </div>
@@ -147,12 +132,15 @@
 <!-- CONTACT -->
 <section id="contact" class="reveal">
   <h2>Contact</h2>
-  <p><b>Open to DevOps / Cloud Engineer opportunities</b></p>
-  <p>📞 9527440597</p>
-  <p>📧 dattawaghmare713@gmail.com</p>
-  <p>🔗 <a href="https://www.linkedin.com/in/dattatray-waghmare" target="_blank">LinkedIn</a></p>
-  <p>💻 <a href="https://github.com/Waghmaredatta713" target="_blank">GitHub</a></p>
-  <a class="btn" href="resume.pdf" target="_blank">📄 Download Resume</a>
+
+  <div class="contact-card">
+    <p><b>Open to DevOps / Cloud Engineer opportunities</b></p>
+    <p>📞 9527440597</p>
+    <p>📧 dattawaghmare713@gmail.com</p>
+    <p>🔗 <a href="https://www.linkedin.com/in/dattatray-waghmare" target="_blank">LinkedIn</a></p>
+    <p>💻 <a href="https://github.com/Waghmaredatta713" target="_blank">GitHub</a></p>
+  </div>
+
 </section>
 
 <footer class="reveal">
@@ -162,9 +150,13 @@
 <!-- TERMINAL SCRIPT -->
 <script>
 const commands=[
-"CI/CD Automation","AWS Cloud Infrastructure","Docker & Kubernetes",
-"Infrastructure as Code","Monitoring & Alerting","Git & GitHub",
-"Automation & Shell Scripting","Production Support"];
+  "CI/CD Automation",
+  "AWS Cloud Infrastructure",
+  "Docker & Kubernetes",
+  "Infrastructure as Code",
+  "Monitoring & Alerting",
+  "Git & GitHub"
+];
 let c=0,i=0,t=document.getElementById("terminal-text");
 function run(){
   if(i<commands[c].length){
@@ -194,9 +186,9 @@ window.addEventListener("scroll",()=>{
 <!-- SCROLL REVEAL -->
 <script>
 const els=document.querySelectorAll(".reveal,.card");
-const obs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting) e.target.classList.add("active");
+const obs=new IntersectionObserver(e=>{
+  e.forEach(x=>{
+    if(x.isIntersecting) x.target.classList.add("active");
   });
 },{threshold:0.15});
 els.forEach(el=>obs.observe(el));
