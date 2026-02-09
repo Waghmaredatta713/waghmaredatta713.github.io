@@ -73,6 +73,7 @@ nav a:hover {
   align-items: center;
 }
 
+/* PROFILE PIC */
 .profile-pic {
   width: 260px;
   height: 260px;
@@ -81,18 +82,19 @@ nav a:hover {
   object-fit: cover;
 }
 
+/* TEXT */
 .hero-text h1 {
   font-size: 2.6rem;
 }
 
-.headline-highlight {
-  background: #fde047;
-  color: #020617;
-  padding: 10px 18px;
-  border-radius: 8px;
-  display: inline-block;
-  font-weight: 700;
-  margin: 14px 0;
+/* GREEN SUBTITLE */
+.hero-subtitle {
+  color: #22c55e;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-top: 6px;
+  margin-bottom: 14px;
+  line-height: 1.4;
 }
 
 /* TERMINAL */
@@ -102,7 +104,7 @@ nav a:hover {
   padding: 14px;
   border-radius: 10px;
   max-width: 420px;
-  margin: 14px 0;
+  margin-bottom: 14px;
   font-family: monospace;
 }
 
@@ -120,7 +122,6 @@ nav a:hover {
 
 /* BUTTON */
 .btn {
-  margin-top: 12px;
   padding: 12px 28px;
   background: linear-gradient(135deg, #38bdf8, #22d3ee);
   border-radius: 30px;
@@ -130,7 +131,7 @@ nav a:hover {
 }
 
 /* SECTIONS */
-section.section-card {
+.section-card {
   max-width: 1100px;
   margin: 60px auto;
   padding: 32px;
@@ -138,7 +139,7 @@ section.section-card {
   border-radius: 22px;
 }
 
-section h2 {
+.section-card h2 {
   border-left: 4px solid #38bdf8;
   padding-left: 14px;
   margin-bottom: 24px;
