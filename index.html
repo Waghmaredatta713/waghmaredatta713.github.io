@@ -19,10 +19,7 @@
 
 <body class="dark">
 
-<!-- SCROLL PROGRESS BAR -->
 <div id="scroll-progress"></div>
-
-<!-- FAINT DEVOPS BACKGROUND -->
 <div class="devops-bg"></div>
 
 <!-- NAVBAR -->
@@ -30,6 +27,7 @@
   <ul>
     <li><a href="#home">Home</a></li>
     <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="blog.html">Blog</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -39,18 +37,14 @@
 <!-- HERO -->
 <header id="home" class="hero reveal">
   <div class="hero-inner">
-
     <img src="pro_Image.jpeg" alt="Dattatray Waghmare" class="profile-pic">
 
     <div class="hero-text">
       <h1>Dattatray Waghmare</h1>
-
-      <!-- YELLOW HIGHLIGHT HEADLINE -->
       <h3 class="headline-highlight">
-        DevOps Engineer | CI/CD Automation | AWS | Docker & Kubernetes | Jenkins | Infrastructure as Code
+        System Administrator | DevOps Engineer | CI/CD Automation | AWS | Docker & Kubernetes | Jenkins | IaC
       </h3>
 
-           <!-- TERMINAL ANIMATION -->
       <div class="terminal">
         <span class="prompt">$</span>
         <span id="terminal-text"></span>
@@ -59,7 +53,6 @@
 
       <a class="btn" href="#contact">Contact Me</a>
     </div>
-
   </div>
 </header>
 
@@ -76,49 +69,62 @@
 <!-- SKILLS -->
 <section id="skills" class="reveal">
   <h2>Core Skills</h2>
-
   <div class="cards">
+    <div class="card"><h3>☁️ Cloud & DevOps</h3><p>AWS, Jenkins, Git, GitHub, Argo CD, CI/CD</p></div>
+    <div class="card"><h3>🐳 Containers</h3><p>Docker, Kubernetes</p></div>
+    <div class="card"><h3>⚙️ IaC</h3><p>Terraform, Ansible</p></div>
+    <div class="card"><h3>🐧 Linux & Monitoring</h3><p>Linux, Shell, Prometheus, Grafana</p></div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="reveal">
+  <h2>Experience</h2>
+  <div class="cards">
+
     <div class="card">
-      <h3>☁️ Cloud & DevOps</h3>
-      <p>AWS, Jenkins, Git, GitHub, Argo CD, CI/CD Automation</p>
+      <h3>Senior Executive – DevOps / System Administrator</h3>
+      <p><b>MDIndia Health Insurance TPA, Pune</b> | May 2023 – Present</p>
+      <ul>
+        <li>Built automated GitOps pipelines using Argo CD to deploy containerized applications on AWS EC2 with Kubernetes, achieving 99.9% uptime.</li>
+        <li>Managed Kubernetes deployments and scaling using Kubernetes Dashboard.</li>
+        <li>Improved deployment speed and reliability by 60% through CI/CD automation.</li>
+      </ul>
     </div>
 
     <div class="card">
-      <h3>🐳 Containers & Orchestration</h3>
-      <p>Docker, Kubernetes</p>
+      <h3>System Administrator</h3>
+      <p><b>Siddhi Health Care, Pune</b> | Jan 2019 – Apr 2023</p>
+      <ul>
+        <li>Automated system health checks using shell scripting and cron jobs.</li>
+        <li>Performed server hardening, patching, and access control, reducing security incidents by 40%.</li>
+        <li>Supported migration toward DevOps-ready automation workflows.</li>
+      </ul>
     </div>
 
-    <div class="card">
-      <h3>⚙️ Infrastructure as Code</h3>
-      <p>Terraform, Ansible</p>
-    </div>
-
-    <div class="card">
-      <h3>🐧 Linux & Monitoring</h3>
-      <p>Linux, Shell Scripting, Prometheus, Grafana</p>
-    </div>
   </div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects" class="reveal">
   <h2>Projects</h2>
-
   <div class="cards">
+
     <div class="card">
       <h3>Automated Deployment on AWS using Kubernetes & Argo CD</h3>
       <p>
-        Built automated GitOps pipelines using Argo CD to deploy containerized applications on AWS EC2 with Kubernetes, enabling high availability, seamless scaling, and 99.9% production uptime (AWS EC2, Kubernetes, Argo CD, Docker, Git, Linux)..
+        Built automated GitOps pipelines using Argo CD to deploy containerized applications on AWS EC2 with Kubernetes, enabling high availability, seamless scaling, and 99.9% production uptime (AWS EC2, Kubernetes, Argo CD, Docker, Git, Linux).
       </p>
-      <p><b>Impact:</b> 60% faster deployments, 99.9% uptime</p>
+      <p><b>Impact:</b> 60% faster deployments</p>
     </div>
 
     <div class="card">
       <h3>Kubernetes Monitoring Platform</h3>
       <p>
-        Implemented a Kubernetes monitoring and alerting platform using Prometheus and Grafana, creating application-level dashboards and alerts that improved incident response time by 35% (Kubernetes, Prometheus, Grafana, Docker).
+       Implemented a Kubernetes monitoring and alerting platform using Prometheus and Grafana, creating application-level dashboards and alerts that improved incident response time by 35% (Kubernetes, Prometheus, Grafana, Docker).
       </p>
     </div>
+
   </div>
 </section>
 
@@ -130,7 +136,6 @@
   <p>📧 dattawaghmare713@gmail.com</p>
   <p>🔗 <a href="https://www.linkedin.com/in/dattatray-waghmare" target="_blank">LinkedIn</a></p>
   <p>💻 <a href="https://github.com/Waghmaredatta713" target="_blank">GitHub</a></p>
-
   <a class="btn" href="resume.pdf" target="_blank">📄 Download Resume</a>
 </section>
 
@@ -138,61 +143,32 @@
   <p>© 2026 Dattatray Waghmare | DevOps Engineer</p>
 </footer>
 
-<!-- TERMINAL ANIMATION SCRIPT -->
+<!-- TERMINAL SCRIPT -->
 <script>
-  const commands = [
-    "CI/CD Automation",
-    "AWS Cloud Infrastructure",
-    "Docker & Kubernetes",
-    "Infrastructure as Code",
-    "Configuration Management",
-    "Monitoring & Alerting (Prometheus, Grafana)",
-    "Git & GitHub",
-    "Automation & Shell Scripting",
-    "Incident & Production Support"
-  ];
-
-  let cmd = 0, char = 0;
-  const terminal = document.getElementById("terminal-text");
-
-  function runTerminal() {
-    if (char < commands[cmd].length) {
-      terminal.textContent += commands[cmd][char++];
-      setTimeout(runTerminal, 80);
-    } else {
-      setTimeout(() => {
-        terminal.textContent = "";
-        char = 0;
-        cmd = (cmd + 1) % commands.length;
-        runTerminal();
-      }, 1200);
-    }
-  }
-  runTerminal();
+const commands=[
+"CI/CD Automation","AWS Cloud Infrastructure","Docker & Kubernetes",
+"Infrastructure as Code","Monitoring & Alerting","Git & GitHub",
+"Automation & Shell Scripting","Production Support"];
+let c=0,i=0,t=document.getElementById("terminal-text");
+function run(){if(i<commands[c].length){t.textContent+=commands[c][i++];setTimeout(run,80);}
+else{setTimeout(()=>{t.textContent="";i=0;c=(c+1)%commands.length;run();},1200);}}
+run();
 </script>
 
-<!-- SCROLL PROGRESS SCRIPT -->
+<!-- SCROLL PROGRESS -->
 <script>
-  const progressBar = document.getElementById("scroll-progress");
-  window.addEventListener("scroll", () => {
-    const d = document.documentElement;
-    progressBar.style.width =
-      (d.scrollTop / (d.scrollHeight - d.clientHeight)) * 100 + "%";
-  });
+const bar=document.getElementById("scroll-progress");
+window.addEventListener("scroll",()=>{const d=document.documentElement;
+bar.style.width=(d.scrollTop/(d.scrollHeight-d.clientHeight))*100+"%";});
 </script>
 
-<!-- SCROLL REVEAL SCRIPT -->
+<!-- SCROLL REVEAL -->
 <script>
-  const revealElements = document.querySelectorAll(".reveal, .card");
-  const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add("active");
-      });
-    },
-    { threshold: 0.15 }
-  );
-  revealElements.forEach(el => observer.observe(el));
+const els=document.querySelectorAll(".reveal,.card");
+const obs=new IntersectionObserver(e=>{
+e.forEach(x=>{if(x.isIntersecting)x.target.classList.add("active");});
+},{threshold:0.15});
+els.forEach(el=>obs.observe(el));
 </script>
 
 </body>
