@@ -15,6 +15,21 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- INLINE FIX (Experience + Projects vertical stack) -->
+  <style>
+    #experience .cards,
+    #projects .cards {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    #experience .card,
+    #projects .card {
+      width: 100%;
+    }
+  </style>
 </head>
 
 <body class="dark">
@@ -42,7 +57,7 @@
     <div class="hero-text">
       <h1>Dattatray Waghmare</h1>
       <h3 class="headline-highlight">
-        System Administrator | DevOps Engineer | CI/CD Automation | AWS | Docker & Kubernetes | Jenkins | IaC
+        System Administrator | DevOps Engineer | CI/CD | AWS | Docker & Kubernetes | IaC
       </h3>
 
       <div class="terminal">
@@ -72,7 +87,7 @@
   <div class="cards">
     <div class="card"><h3>☁️ Cloud & DevOps</h3><p>AWS, Jenkins, Git, GitHub, Argo CD, CI/CD</p></div>
     <div class="card"><h3>🐳 Containers</h3><p>Docker, Kubernetes</p></div>
-    <div class="card"><h3>⚙️ IaC</h3><p>Terraform, Ansible</p></div>
+    <div class="card"><h3>⚙️ Infrastructure as Code</h3><p>Terraform, Ansible</p></div>
     <div class="card"><h3>🐧 Linux & Monitoring</h3><p>Linux, Shell, Prometheus, Grafana</p></div>
   </div>
 </section>
@@ -113,16 +128,17 @@
     <div class="card">
       <h3>Automated Deployment on AWS using Kubernetes & Argo CD</h3>
       <p>
-        Built automated GitOps pipelines using Argo CD to deploy containerized applications on AWS EC2 with Kubernetes, enabling high availability, seamless scaling, and 99.9% production uptime (AWS EC2, Kubernetes, Argo CD, Docker, Git, Linux).
+        Built automated GitOps pipelines using Argo CD to deploy containerized applications on AWS EC2 with Kubernetes, enabling high availability, seamless scaling, and 99.9% production uptime (AWS EC2, Kubernetes, Argo CD, Docker, Git, Linux). 
       </p>
       <p><b>Impact:</b> 60% faster deployments</p>
     </div>
 
     <div class="card">
-      <h3>Kubernetes Monitoring Platform</h3>
+      <h3>Kubernetes Monitoring & Alerting Platform</h3>
       <p>
-       Implemented a Kubernetes monitoring and alerting platform using Prometheus and Grafana, creating application-level dashboards and alerts that improved incident response time by 35% (Kubernetes, Prometheus, Grafana, Docker).
+        Implemented a Kubernetes monitoring and alerting platform using Prometheus and Grafana, creating application-level dashboards and alerts that improved incident response time by 35% (Kubernetes, Prometheus, Grafana, Docker). 
       </p>
+      <p><b>Impact:</b> Reduced incident response time by 35%</p>
     </div>
 
   </div>
@@ -150,23 +166,38 @@ const commands=[
 "Infrastructure as Code","Monitoring & Alerting","Git & GitHub",
 "Automation & Shell Scripting","Production Support"];
 let c=0,i=0,t=document.getElementById("terminal-text");
-function run(){if(i<commands[c].length){t.textContent+=commands[c][i++];setTimeout(run,80);}
-else{setTimeout(()=>{t.textContent="";i=0;c=(c+1)%commands.length;run();},1200);}}
+function run(){
+  if(i<commands[c].length){
+    t.textContent+=commands[c][i++];
+    setTimeout(run,80);
+  }else{
+    setTimeout(()=>{
+      t.textContent="";
+      i=0;
+      c=(c+1)%commands.length;
+      run();
+    },1200);
+  }
+}
 run();
 </script>
 
 <!-- SCROLL PROGRESS -->
 <script>
 const bar=document.getElementById("scroll-progress");
-window.addEventListener("scroll",()=>{const d=document.documentElement;
-bar.style.width=(d.scrollTop/(d.scrollHeight-d.clientHeight))*100+"%";});
+window.addEventListener("scroll",()=>{
+  const d=document.documentElement;
+  bar.style.width=(d.scrollTop/(d.scrollHeight-d.clientHeight))*100+"%";
+});
 </script>
 
 <!-- SCROLL REVEAL -->
 <script>
 const els=document.querySelectorAll(".reveal,.card");
-const obs=new IntersectionObserver(e=>{
-e.forEach(x=>{if(x.isIntersecting)x.target.classList.add("active");});
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting) e.target.classList.add("active");
+  });
 },{threshold:0.15});
 els.forEach(el=>obs.observe(el));
 </script>
