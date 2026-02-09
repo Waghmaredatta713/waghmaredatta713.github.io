@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
   <title>Dattatray Waghmare | DevOps Engineer</title>
-  <meta name="description" content="DevOps Engineer with experience in AWS, CI/CD, Docker, Kubernetes, Jenkins and Infrastructure as Code.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <meta name="description" content="DevOps Engineer with experience in AWS, CI/CD, Docker, Kubernetes, Jenkins and Infrastructure as Code.">
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -36,10 +37,12 @@
     <div class="hero-text">
       <h1>Dattatray Waghmare</h1>
 
-      <h3 class="headline-highlight">
-        System Administrator | DevOps Engineer | CI/CD | AWS | Docker & Kubernetes | IaC
+      <!-- GREEN SUBTITLE -->
+      <h3 class="hero-subtitle">
+        DevOps Engineer | CI/CD Automation | AWS | Docker & Kubernetes | Jenkins | IaC
       </h3>
 
+      <!-- TERMINAL -->
       <div class="terminal">
         <span class="prompt">$</span>
         <span id="terminal-text"></span>
@@ -53,17 +56,17 @@
 </header>
 
 <!-- SUMMARY -->
-<section id="summary" class="reveal section-card">
+<section id="summary" class="section-card reveal">
   <h2>Professional Summary</h2>
   <p>
     DevOps Engineer with 6+ years of experience in system administration and IT infrastructure,
     including hands-on expertise in AWS, CI/CD pipelines, Docker, Kubernetes, and Infrastructure as Code.
-    Proven ability to improve deployment reliability and production stability.
+    Focused on reliability, automation, and production stability.
   </p>
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="reveal section-card">
+<section id="skills" class="section-card reveal">
   <h2>Core Skills</h2>
   <div class="skills-list">
     <span>AWS</span>
@@ -81,16 +84,16 @@
 </section>
 
 <!-- EXPERIENCE -->
-<section id="experience" class="reveal section-card">
+<section id="experience" class="section-card reveal">
   <h2>Experience</h2>
 
   <div class="exp-block">
     <h3>Senior Executive – DevOps / System Administrator</h3>
     <p class="company">MDIndia Health Insurance TPA, Pune | May 2023 – Present</p>
     <ul>
-      <li>Built GitOps-based deployment pipelines using Argo CD on AWS EC2 with Kubernetes.</li>
+      <li>Built GitOps-based CI/CD pipelines using Argo CD on AWS EC2 with Kubernetes.</li>
       <li>Maintained 99.9% uptime for production workloads.</li>
-      <li>Improved deployment speed and reliability by 60% through CI/CD automation.</li>
+      <li>Improved deployment speed and reliability by 60%.</li>
     </ul>
   </div>
 
@@ -99,20 +102,20 @@
     <p class="company">Siddhi Health Care, Pune | Jan 2019 – Apr 2023</p>
     <ul>
       <li>Automated system health checks using shell scripting and cron jobs.</li>
-      <li>Performed server hardening and patching, reducing security incidents by 40%.</li>
+      <li>Reduced security incidents by 40%.</li>
     </ul>
   </div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="reveal section-card">
+<section id="projects" class="section-card reveal">
   <h2>Projects</h2>
 
   <div class="proj-block">
     <h3>Automated Deployment on AWS using Kubernetes & Argo CD</h3>
     <p>
-      Designed GitOps-based CI/CD pipelines for containerized applications,
-      enabling high availability and seamless scaling on AWS.
+      Designed GitOps-based deployment pipelines for containerized applications,
+      ensuring high availability and seamless scaling.
     </p>
   </div>
 
@@ -126,7 +129,7 @@
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="reveal section-card">
+<section id="contact" class="section-card reveal">
   <h2>Contact</h2>
 
   <div class="contact-card">
@@ -148,13 +151,13 @@
 <script>
 const commands = [
   "CI/CD Automation",
-  "AWS Cloud Infrastructure",
+  "AWS Infrastructure",
   "Docker & Kubernetes",
-  "Infrastructure as Code",
   "Monitoring & Alerting",
   "Production Support"
 ];
 let c = 0, i = 0, t = document.getElementById("terminal-text");
+
 function run() {
   if (i < commands[c].length) {
     t.textContent += commands[c][i++];
@@ -171,6 +174,7 @@ function run() {
 run();
 </script>
 
+<!-- SCROLL BAR -->
 <script>
 const bar = document.getElementById("scroll-progress");
 window.addEventListener("scroll", () => {
@@ -180,6 +184,7 @@ window.addEventListener("scroll", () => {
 });
 </script>
 
+<!-- REVEAL -->
 <script>
 const els = document.querySelectorAll(".reveal");
 const obs = new IntersectionObserver(entries => {
