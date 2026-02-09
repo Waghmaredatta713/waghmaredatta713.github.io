@@ -1,114 +1,253 @@
-/* BASIC RESET */
+/* =====================
+   GLOBAL RESET
+===================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body.dark {
-  font-family: Arial, sans-serif;
-  background: #020617;
+  font-family: "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #0b1220, #020617);
   color: #e5e7eb;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
-/* HERO */
-.hero {
-  text-align: center;
-  padding: 70px 20px 50px;
+/* =====================
+   SCROLL PROGRESS
+===================== */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0;
+  background: linear-gradient(90deg, #38bdf8, #22d3ee);
+  z-index: 9999;
 }
 
-/* 5) BIGGER PROFILE PIC */
-.profile-pic {
-  width: 240px;
-  height: 240px;
-  border-radius: 50%;
-  border: 4px solid #38bdf8;
-  margin-bottom: 20px;
+/* =====================
+   BACKGROUND
+===================== */
+.devops-bg {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 20% 10%, rgba(56,189,248,0.08), transparent 40%),
+              radial-gradient(circle at 80% 30%, rgba(34,211,238,0.08), transparent 40%);
+  pointer-events: none;
+  z-index: -1;
 }
 
-/* 1) YELLOW BACKGROUND */
-.headline-highlight {
-  background: #fde047;
-  color: #020617;
-  padding: 10px 16px;
-  display: inline-block;
-  font-weight: 700;
-  margin: 14px 0;
+/* =====================
+   NAVBAR
+===================== */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(2,6,23,0.85);
+  backdrop-filter: blur(10px);
+  padding: 14px 40px;
 }
 
-/* 2) LESS SPACE BELOW CONTACT ME */
-.contact-btn {
-  margin-top: 6px;
+nav ul {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  justify-content: center;
 }
 
-/* BUTTONS */
-.btn {
-  display: inline-block;
-  padding: 10px 22px;
-  background: #38bdf8;
-  color: #020617;
+nav a {
+  color: #cbd5f5;
   text-decoration: none;
-  border-radius: 6px;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #38bdf8;
+}
+
+/* =====================
+   HERO
+===================== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+}
+
+.hero-inner {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.profile-pic {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  border: 3px solid #38bdf8;
+  object-fit: cover;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+}
+
+.headline-highlight {
+  color: #38bdf8;
+  margin: 12px 0;
   font-weight: 600;
 }
 
-.resume-btn {
-  margin-top: 20px;
-}
-
-/* 3) SECTIONS POPUP + SAME BACKGROUND */
-.section-card {
-  max-width: 900px;
-  margin: 50px auto;
-  padding: 30px;
-  background: #0f172a;
-  border-radius: 12px;
-}
-
-/* POPUP EFFECT */
-.popup {
-  animation: popup 0.6s ease;
-}
-
-@keyframes popup {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.section-card h2 {
-  margin-bottom: 18px;
-  border-bottom: 2px solid #38bdf8;
-  padding-bottom: 6px;
-}
-
-/* LISTS */
-ul {
-  margin-left: 20px;
-  margin-bottom: 20px;
-}
-
-li {
-  margin-bottom: 6px;
-}
-
-/* 4) CONTACT SAME BACKGROUND */
-.contact-card {
-  background: #0f172a;
-  padding: 20px;
+/* =====================
+   TERMINAL
+===================== */
+.terminal {
+  background: #020617;
+  border: 1px solid #1e293b;
+  padding: 14px;
+  margin: 18px 0;
   border-radius: 10px;
-  margin-top: 10px;
+  font-family: monospace;
 }
 
-/* FOOTER */
+.prompt {
+  color: #22d3ee;
+}
+
+.cursor {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* =====================
+   BUTTON
+===================== */
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 22px;
+  background: linear-gradient(135deg, #38bdf8, #22d3ee);
+  color: #020617;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* =====================
+   SECTIONS
+===================== */
+section {
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  border-left: 4px solid #38bdf8;
+  padding-left: 14px;
+}
+
+/* =====================
+   CARDS (BASE)
+===================== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: rgba(15,23,42,0.85);
+  border: 1px solid #1e293b;
+  padding: 25px;
+  border-radius: 16px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(56,189,248,0.15);
+}
+
+.card h3 {
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+.card ul {
+  margin-top: 12px;
+  padding-left: 18px;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+/* =====================
+   EXPERIENCE & PROJECTS
+   (VERTICAL STACK)
+===================== */
+#experience .cards,
+#projects .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+#experience .card,
+#projects .card {
+  width: 100%;
+}
+
+/* =====================
+   FOOTER
+===================== */
 footer {
   text-align: center;
-  padding: 30px;
+  padding: 40px 20px;
   color: #94a3b8;
+}
+
+/* =====================
+   REVEAL ANIMATION
+===================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.7s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 768px) {
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+  }
 }
